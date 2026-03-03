@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>关于我</title>
+    <style>
+        /* 全局样式重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Microsoft Yahei", sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        /* 导航栏样式 */
+        .navbar {
+            background-color: #2c3e50;
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #3498db;
+        }
+
+        /* 下拉菜单容器 */
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        /* 下拉按钮样式 */
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 20px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        /* 下拉内容（默认隐藏） */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        /* 下拉链接样式 */
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        /* 鼠标悬停在下拉链接上的效果 */
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        /* 鼠标悬停在下拉容器上时，显示下拉内容 */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* 主要内容区 */
+        .content {
+            text-align: center;
+            padding-top: 100px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #165DFF;
+            font-size: 48px;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        p {
+            color: #666666;
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        h2 {
+            color: #2c3e50;
+            font-size: 32px;
+            margin: 40px 0 20px;
+            text-align: left;
+        }
+        /* 手机适配：当屏幕宽度小于 768px 时生效 */
+@media (max-width: 768px) {
+    /* 导航栏改成竖排 */
+    .navbar a, .dropdown {
+        float: none;
+        text-align: left;
+    }
+
+    /* 下拉菜单按钮样式调整 */
+    .dropdown .dropbtn {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+
+    /* 内容区边距调整 */
+    .content {
+        padding-top: 150px; /* 导航栏变高了，内容要往下挪 */
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* 标题变小 */
+    h1 {
+        font-size: 36px;
+    }
+
+    /* 图片宽度占满屏幕 */
+    .my-image {
+        max-width: 100%;
+    }
+}
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <div class="navbar">
+        <a href="index.html">首页</a>
+        <div class="dropdown">
+            <a href="about.html" class="dropbtn">关于我</a>
+            <div class="dropdown-content">
+                <a href="#profile">个人简介</a>
+                <a href="#hobbies">兴趣爱好</a>
+                <a href="#skills">我的技能</a>
+            </div>
+        </div>
+        <a href="contact.html">联系方式</a>
+        <a href="#login" style="float:right; background-color: #3498db;">登录</a>
+    </div>
+
+    <!-- 主要内容 -->
+    <div class="content">
+        <h1>关于我</h1>
+
+        <h2 id="profile">个人简介</h2>
+        <p>大家好，我是一名正在学习网页开发的初学者。我喜欢通过实践来学习，现在已经能独立制作出美观的网页了。</p>
+
+        <h2 id="hobbies">兴趣爱好</h2>
+        <p>我喜欢探索新技术，尤其是前端开发。在业余时间，我也喜欢看科技资讯，了解行业动态。</p>
+
+        <h2 id="skills">我的技能</h2>
+        <p>目前我已经掌握了HTML和CSS的基础知识，能够制作导航栏、按钮、图片布局等常见网页元素。</p>
+    </div>
+</body>
+</html>

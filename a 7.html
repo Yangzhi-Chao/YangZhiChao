@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>我的第一个网页</title>
+    <style>
+        /* 全局样式重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+    font-family: "Microsoft Yahei", sans-serif;
+    background-color: #f8f9fa; /* 更柔和的浅白 */
+}
+
+        /* 导航栏样式 */
+        .navbar {
+            background-color: #2c3e50;
+            overflow: hidden;
+            position: fixed; /* 固定定位 */
+            top: 0;          /* 固定在顶部 */
+            width: 100%;     /* 宽度占满屏幕 */
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #3498db;
+        }
+
+        /* 下拉菜单容器 */
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        /* 下拉按钮样式 */
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 20px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        /* 下拉内容（默认隐藏） */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        /* 下拉链接样式 */
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        /* 鼠标悬停在下拉链接上的效果 */
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        /* 鼠标悬停在下拉容器上时，显示下拉内容 */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* 主要内容区 */
+        .content {
+            text-align: center;
+            padding-top: 100px; /* 增大上边距，防止被固定导航栏遮挡 */
+        }
+
+        h1 {
+    color: #165DFF; /* 亮眼的蓝色 */
+    font-size: 56px; /* 字体更大 */
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1); /* 加轻微阴影，更立体 */
+}
+
+        p {
+    color: #666666; /* 浅灰色，不刺眼 */
+    font-size: 22px; /* 字体稍大 */
+    line-height: 1.6; /* 行间距更舒服 */
+    margin-bottom: 40px; /* 和图片间距更大 */
+}
+
+        /* 图片样式 */
+        .my-image {
+            max-width: 300px;
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin: 0 auto 30px;
+            display: block;
+        }
+
+        /* 按钮样式 */
+        button {
+    padding: 12px 30px;
+    font-size: 18px;
+    background-color: #165DFF; /* 和标题同色系 */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s; /* 动画过渡，更丝滑 */
+}
+button:hover {
+    background-color: #0D47A1; /* 更深的蓝色 */
+    transform: scale(1.05); /* 鼠标移上去放大5% */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15); /* 加阴影 */
+}
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <div class="navbar">
+        <a href="#home">首页</a>
+        <div class="dropdown">
+            <a href="#about" class="dropbtn">关于我</a>
+            <div class="dropdown-content">
+                <a href="#profile">个人简介</a>
+                <a href="#hobbies">兴趣爱好</a>
+                <a href="#skills">我的技能</a>
+            </div>
+        </div>
+        <a href="#contact">联系方式</a>
+        <a href="#login" style="float:right; background-color: #3498db;">登录</a>
+    </div>
+
+    <!-- 主要内容 -->
+    <div class="content">
+        <h1>🎉 我成功做出网站啦！</h1>
+        <p>这是我用 VS Code 写的第一个网页，感觉超酷！</p>
+        <img src="C:\Users\杨志苹\Desktop\微信图片_2026-02-27_180225_909.jpg" class="my-image">
+        <button onclick="alert('太棒了！你已经成功入门网页开发了！')">点我试试</button>
+    </div>
+</body>
+</html>
