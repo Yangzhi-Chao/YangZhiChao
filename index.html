@@ -13,8 +13,8 @@
   margin: 30px auto;
 }
 /* 学的图片隐藏样式（基础知识点） */
-.mySlides {
-  display: none;
+.mySlides img:hover{
+  transform:scale(1.05); box-shadow:0 4px 12px rgba(0.0.0.0.15);
 }
 /* 学的左右按钮样式 */
 .prev, .next {
@@ -71,7 +71,7 @@
 </head>
 <body>
   <header style="background: #f8f9fa; padding: 15px 0; text-align: center; margin-bottom: 20px;">
-  <h1 style="margin: 0; color: #333; font-size: 24px;">杨志超学做网站欢迎各位点评交流</h1>
+  <h1 style="margin: 0; color: #333; font-size: 24px;">我的产品展示站</h1>
   <nav style="margin-top: 10px;">
     <a href="#" style="margin: 0 15px; text-decoration: none; color: #0099ff;">首页</a>
     <a href="#" style="margin: 0 15px; text-decoration: none; color: #0099ff;">产品展示</a>
@@ -82,27 +82,26 @@
 <!-- 最开始学的HTML结构：轮播图容器+图片+文字 -->
 <div class="slideshow-container">
   <div class="mySlides">
-    <img src="z1.jpg" style="width:50%;max-height: 300px; object-fit: contain; display: block; margin: 0 auto;">
+    <img src="z1.jpg" alt="作品1"style="width:50%;max-height:300px;object-fit:contain;display:block;margin:0auto;border-radius:8px;transitio:all 0.3s ease;">
     <div class="text">第一张图文字</div>
   </div>
   <div class="mySlides">
-    <img src="z2.jpg" style="width:50%;max-height: 300px; object-fit: contain; display: block; margin: 0 auto;">
-    <div class="text">第二张图文字</div>
+    <img src="z2.jpg"alt="作品2"style="width:50%;max-height:300px;object-fit:contain;display:block;margin:0auto;border-radius:8px;transitio:all 0.3s ease;">
   </div>
   <div class="mySlides">
-    <img src="z3.jpg" style="width:50%;max-height: 300px; object-fit: contain; display: block; margin: 0 auto;">
+    <img src="z3.jpg"alt="作品3"style="width:50%;max-height:300px;object-fit:contain;display:block;margin:0auto;border-radius:8px;transitio:all 0.3s ease;">
     <div class="text">第三张图文字</div>
   </div>
   <div class="mySlides">
-    <img src="z4.jpg" style="width:50%;max-height: 300px; object-fit: contain; display: block; margin: 0 auto;">
+    <img src="z4.jpg"alt="作品4"style="width:50%;max-height:300px;object-fit:contain;display:block;margin:0auto;border-radius:8px;transitio:all 0.3s ease;">
     <div class="text">第四张图文字</div>
   </div>
   <div class="mySlides">
-    <img src="z5.jpg" style="width:50%;max-height: 300px; object-fit: contain; display: block; margin: 0 auto;">
+    <img src="z5.jpg"alt="作品5"style="width:50%;max-height:300px;object-fit:contain;display:block;margin:0auto;border-radius:8px;transitio:all 0.3s ease;">
     <div class="text">第五张图文字</div>
   </div>
   <div class="mySlides">
-    <img src="z6.jpg" style="width:50%;max-height: 300px; object-fit: contain; display: block; margin: 0 auto;">
+    <img src="z6.jpg"alt="作品6"style="width:50%;max-height:300px;object-fit:contain;display:block;margin:0auto;border-radius:8px;transitio:all 0.3s ease;">
     <div class="text">第六张图文字</div>
   </div>
 <!-- 学的左右切换按钮（仅修正错误数字，保留原结构） -->
@@ -164,7 +163,7 @@
 </div>
 </main>
 <footer style="background: #f8f9fa; padding: 20px 0; text-align: center; margin-top: 30px; font-size: 14px; color: #666;">
-  <p>© 2026 这是我的展示表格和图片我会多学习 | 联系方式：your_email@16.com</p>
+  <p>© 2026 我的产品展示站 | 联系方式：your_email@163.com</p>
 </footer>
 <script>
 let slideIndex = 1;
@@ -228,5 +227,4 @@ setTimeout(() => {
 }
 </script>
 </body>
-
 </html>
