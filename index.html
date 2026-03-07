@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <!-- 最开始学的页面基础设置 -->
+    <title>我的轮播图</title>
+    <!-- 之前学的外部CSS引用（保留，即使现在用内部style也不删） -->
+    <style>
+        /* 最开始学的轮播容器样式 */
+.slideshow-container {
+  max-width: 800px;
+  position: relative;
+  margin: 30px auto;
+}
+/* 学的图片隐藏样式（基础知识点） */
+.mySlides {
+  display: none;
+}
+/* 学的左右按钮样式 */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+/* 重点学的文字颜色修改（color: red; 核心知识点） */
+.text {
+  color: white;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  /* 关键修改：不再固定宽度，而是紧贴图片 */
+  width: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 4px;
+}
+/* 学的圆点指示器样式 */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+  background-color: #717171;
+}
+    </style>
+</head>
+<body>
+  <header style="background: #f8f9fa; padding: 15px 0; text-align: center; margin-bottom: 20px;">
+  <h1 style="margin: 0; color: #333; font-size: 24px;">我的产品展示站</h1>
+  <nav style="margin-top: 10px;">
+    <a href="#" style="margin: 0 15px; text-decoration: none; color: #0099ff;">首页</a>
+    <a href="#" style="margin: 0 15px; text-decoration: none; color: #0099ff;">产品展示</a>
+    <a href="#" style="margin: 0 15px; text-decoration: none; color: #0099ff;">在线留言</a>
+  </nav>
+  </header>
+<main>
+<!-- 最开始学的HTML结构：轮播图容器+图片+文字 -->
+<div class="slideshow-container">
+  <div class="mySlides">
+    <img src="z1.jpg" style="width:50%;max-height: 300px; object-fit: contain; display: block; margin: 0 auto;">
+    <div class="text">第一张图文字</div>
+  </div>
+  <div class="mySlides">
+    <img src="z2.jpg" style="width:50%;max-height: 300px; object-fit: contain; display: block; margin: 0 auto;">
+    <div class="text">第二张图文字</div>
+  </div>
+  <div class="mySlides">
+    <img src="z3.jpg" style="width:50%;max-height: 300px; object-fit: contain; display: block; margin: 0 auto;">
+    <div class="text">第三张图文字</div>
+  </div>
+  <div class="mySlides">
+    <img src="z4.jpg" style="width:50%;max-height: 300px; object-fit: contain; display: block; margin: 0 auto;">
+    <div class="text">第四张图文字</div>
+  </div>
+  <div class="mySlides">
+    <img src="z5.jpg" style="width:50%;max-height: 300px; object-fit: contain; display: block; margin: 0 auto;">
+    <div class="text">第五张图文字</div>
+  </div>
+  <div class="mySlides">
+    <img src="z6.jpg" style="width:50%;max-height: 300px; object-fit: contain; display: block; margin: 0 auto;">
+    <div class="text">第六张图文字</div>
+  </div>
+<!-- 学的左右切换按钮（仅修正错误数字，保留原结构） -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<!-- 学的底部圆点（保留原2个+补全对应数量，不删原有） -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+</div>
+<!-- 后来学的JS交互代码（完整保留，仅移动位置，不删任何一行） -->
+<!-- 1. 学的切换图片函数 -->
+ <!-- 下一步学习：基础表单 -->
+<!-- 下一步学习：基础表单 -->
+<!-- 在线留言表单（完整、结构正确） -->
+<!-- 在线留言表单（完整、结构正确） -->
+<div style="max-width: 600px; margin: 40px auto; padding: 0 20px;">
+  <h2 style="text-align: center; color: #333; margin-bottom: 25px;">在线留言</h2>
+  <form class="contact-form" onsubmit="handleSubmit(event)"action="https://wj.qq.com/s2/25894031/bba3/" method="GET"target="_blank"style="background: #f8f9fa; padding: 25px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+    <div style="margin-bottom: 18px;">
+      <label style="display: block; margin-bottom: 6px; font-weight: bold; color: #444;">姓名：</label>
+      <input 
+        type="text" 
+        name="q1"
+        placeholder="请输入你的姓名"
+        style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px;"
+      >
+    </div>
+    <div style="margin-bottom: 18px;">
+      <label style="display: block; margin-bottom: 6px; font-weight: bold; color: #444;">邮箱：</label>
+      <input 
+        type="email" 
+        name="q2" 
+        placeholder="请输入你的邮箱"
+        style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px;"
+      >
+    </div>
+    <div style="margin-bottom: 18px;">
+      <label style="display: block; margin-bottom: 6px; font-weight: bold; color: #444;">留言内容：</label>
+      <textarea 
+        name="q3" 
+        rows="4"
+        placeholder="请输入你的需求或留言"
+        style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px; resize: vertical;"
+      ></textarea>
+    </div>
+    <button 
+      type="submit"
+      style="width: 100%; padding: 12px; background-color: #00cc66; color: white; border: none; border-radius: 4px; font-size: 16px; cursor: pointer;"
+    >
+      提交留言
+    </button>
+  </form>
+</div>
+</main>
+<footer style="background: #f8f9fa; padding: 20px 0; text-align: center; margin-top: 30px; font-size: 14px; color: #666;">
+  <p>© 2026 我的产品展示站 | 联系方式：your_email@163.com</p>
+</footer>
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+// 最后学的自动播放代码（完整保留，不删除）
+function autoSlide() {
+  plusSlides(1);
+  setTimeout(autoSlide, 3000);
+}
+autoSlide();
+// 新增：表单提交处理
+  function handleSubmit(event) {
+  // 1. 阻止默认跳转，先验证
+  event.preventDefault();
+  const form = event.target;
+// 👇 这里改成 q1, q2, q3，和你表单里的 name 对应
+  const name = form.q1.value;
+  const email = form.q2.value;
+  const message = form.q3.value;
+
+  if (!name || !email || !message) {
+    alert("姓名、邮箱、留言都要填哦！");
+    return;
+  }
+
+  const wjUrl = "https://wj.qq.com/s2/25894031/bba3/";
+  const fullUrl = wjUrl + "?q1=" + encodeURIComponent(name) + "&q2=" + encodeURIComponent(email) + "&q3=" + encodeURIComponent(message);
+
+  alert("即将跳转到问卷页面，提交后数据会保存到后台！");
+ // 👇 替换原来的 window.open 这一行，改成下面3行
+const newWindow = window.open("https://wj.qq.com/s2/25894031/bba3/", "_blank");
+setTimeout(() => {
+  newWindow.location.href = fullUrl;
+}, 500);
+  form.reset();
+
+  console.log("客户留言：", { name, email, message });
+}
+</script>
+</body>
+</html>
