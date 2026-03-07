@@ -67,15 +67,30 @@
 .active, .dot:hover {
   background-color: #717171;
 }
+.nav-link {
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+/* 鼠标悬浮样式 */
+.nav-link:hover {
+  background-color: #0099ff;
+  color: white !important;
+}
+/* 点击激活样式（当前页高亮） */
+.nav-link.active {
+  background-color: #007acc;
+  color: white !important;
+}
     </style>
 </head>
 <body>
   <header style="background: #f8f9fa; padding: 15px 0; text-align: center; margin-bottom: 20px;">
   <h1 style="margin: 0; color: #333; font-size: 24px;">我的产品展示站</h1>
   <nav style="margin-top: 10px;">
-    <a href="#" style="margin: 0 15px; text-decoration: none; color: #0099ff;">首页</a>
-    <a href="#" style="margin: 0 15px; text-decoration: none; color: #0099ff;">产品展示</a>
-    <a href="#" style="margin: 0 15px; text-decoration: none; color: #0099ff;">在线留言</a>
+    <a href="#"class= "nav-link"style=margin: 0 15px; text-decoration: none; color: #0099ff;">首页</a>
+    <a href="#" class= "nav-link"style="margin: 0 15px; text-decoration: none; color: #0099ff;">产品展示</a>
+    <a href="#"class= "nav-link" style="margin: 0 15px; text-decoration: none; color: #0099ff;">在线留言</a>
   </nav>
   </header>
 <main>
@@ -225,6 +240,19 @@ setTimeout(() => {
 
   console.log("客户留言：", { name, email, message });
 }
+// 导航栏点击高亮
+const navLinks = document.querySelectorAll('.nav-link');
+navLinks.forEach(link => {
+  link.addEventListener('click', (e) => {
+    // 先去掉所有链接的 active 类
+    navLinks.forEach(l => l.classList.remove('active'));
+    // 给当前点击的链接加上 active 类
+    e.target.classList.add('active');
+  });
+});
+// 默认让“首页”高亮
+navLinks[0].classList.add('active');
+
 </script>
 </body>
 </html>
