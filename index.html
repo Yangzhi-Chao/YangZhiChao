@@ -14,10 +14,10 @@
 }
 /* 学的图片隐藏样式（基础知识点） */
 .mySlides img:hover{
-  transform:scale(1.05); box-shadow:0 4px 12px rgba(0.0.0.0.15);
-}
+  transform:scale(1.05); box-shadow:0 4px 12px rgba(0,0,0,0.15);}
 /* 学的左右按钮样式 */
-.prev, .next {
+.prev,.next {
+  display:block;
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -67,56 +67,62 @@
 .active, .dot:hover {
   background-color: #717171;
 }
+/* 导航链接默认样式 */
 .nav-link {
-  padding: 5px 10px;
-  border-radius: 4px;
+  padding: 8px 16px; /* 增加内边距，让按钮更舒展 */
+  border-radius: 6px; /* 圆角更大，更柔和 */
   transition: all 0.3s ease;
+  font-weight: 500; /* 字体稍微加粗 */
 }
 /* 鼠标悬浮样式 */
 .nav-link:hover {
-  background-color: #0099ff;
+  background-color: #33b5e5; /* 更柔和的亮蓝色 */
   color: white !important;
+  transform: translateY(-2px); /* 鼠标悬浮时轻微上浮 */
+  box-shadow: 0 2px 4px rgba(0,153,255,0.3); /* 加一点阴影 */
 }
 /* 点击激活样式（当前页高亮） */
 .nav-link.active {
-  background-color: #007acc;
+  background-color: #0099cc; /* 更协调的深蓝色 */
   color: white !important;
+  box-shadow: 0 2px 4px rgba(0,153,204,0.4);
 }
     </style>
 </head>
 <body>
   <header style="background: #f8f9fa; padding: 15px 0; text-align: center; margin-bottom: 20px;">
   <h1 style="margin: 0; color: #333; font-size: 24px;">我的产品展示站</h1>
-  <nav style="margin-top: 10px;">
-    <a href="#"class= "nav-link"style=margin: 0 15px; text-decoration: none; color: #0099ff;">首页</a>
-    <a href="#" class= "nav-link"style="margin: 0 15px; text-decoration: none; color: #0099ff;">产品展示</a>
-    <a href="#"class= "nav-link" style="margin: 0 15px; text-decoration: none; color: #0099ff;">在线留言</a>
+  <nav style="margin-top: 15px; padding: 10px 0;">
+    <a href="#" class="nav-link" style="margin: 0 15px; text-decoration: none; color: #0099ff;">首页</a>
+    <a href="#" class="nav-link" style="margin: 0 15px; text-decoration: none; color: #0099ff;">产品展示</a>
+    <a href="#" class="nav-link" style="margin: 0 15px; text-decoration: none; color: #0099ff;">在线留言</a>
   </nav>
   </header>
 <main>
 <!-- 最开始学的HTML结构：轮播图容器+图片+文字 -->
 <div class="slideshow-container">
   <div class="mySlides">
-    <img src="z1.jpg" alt="作品1"style="width:50%;max-height:300px;object-fit:contain;display:block;margin:0auto;border-radius:8px;transitio:all 0.3s ease;">
-    <div class="text">第一张图文字</div>
+    <img src="z1.jpg" alt="作品1" style="width:50%; max-height: 300px; object-fit: contain; display: block; margin: 0 auto; border-radius:8px; transition: all 0.3s ease;">
+    <div class="text">第1张图文字</div>
   </div>
   <div class="mySlides">
-    <img src="z2.jpg"alt="作品2"style="width:50%;max-height:300px;object-fit:contain;display:block;margin:0auto;border-radius:8px;transitio:all 0.3s ease;">
+    <img src="z2.jpg" alt="作品1" style="width:50%; max-height: 300px; object-fit: contain; display: block; margin: 0 auto; border-radius:8px; transition: all 0.3s ease;">
+  <div  class="text">第二张图文字</div>
   </div>
   <div class="mySlides">
-    <img src="z3.jpg"alt="作品3"style="width:50%;max-height:300px;object-fit:contain;display:block;margin:0auto;border-radius:8px;transitio:all 0.3s ease;">
+    <img src="z3.jpg" alt="作品1" style="width:50%; max-height: 300px; object-fit: contain; display: block; margin: 0 auto; border-radius:8px; transition: all 0.3s ease;">
     <div class="text">第三张图文字</div>
   </div>
   <div class="mySlides">
-    <img src="z4.jpg"alt="作品4"style="width:50%;max-height:300px;object-fit:contain;display:block;margin:0auto;border-radius:8px;transitio:all 0.3s ease;">
+    <img src="z4.jpg" alt="作品1" style="width:50%; max-height: 300px; object-fit: contain; display: block; margin: 0 auto; border-radius:8px; transition: all 0.3s ease;">
     <div class="text">第四张图文字</div>
   </div>
   <div class="mySlides">
-    <img src="z5.jpg"alt="作品5"style="width:50%;max-height:300px;object-fit:contain;display:block;margin:0auto;border-radius:8px;transitio:all 0.3s ease;">
+    <img src="z5.jpg" alt="作品1" style="width:50%; max-height: 300px; object-fit: contain; display: block; margin: 0 auto; border-radius:8px; transition: all 0.3s ease;">
     <div class="text">第五张图文字</div>
   </div>
   <div class="mySlides">
-    <img src="z6.jpg"alt="作品6"style="width:50%;max-height:300px;object-fit:contain;display:block;margin:0auto;border-radius:8px;transitio:all 0.3s ease;">
+    <img src="z6.jpg" alt="作品1" style="width:50%; max-height: 300px; object-fit: contain; display: block; margin: 0 auto; border-radius:8px; transition: all 0.3s ease;">
     <div class="text">第六张图文字</div>
   </div>
 <!-- 学的左右切换按钮（仅修正错误数字，保留原结构） -->
@@ -140,7 +146,7 @@
 <!-- 在线留言表单（完整、结构正确） -->
 <div style="max-width: 600px; margin: 40px auto; padding: 0 20px;">
   <h2 style="text-align: center; color: #333; margin-bottom: 25px;">在线留言</h2>
-  <form class="contact-form" onsubmit="handleSubmit(event)"action="https://wj.qq.com/s2/25894031/bba3/" method="GET"target="_blank"style="background: #f8f9fa; padding: 25px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+  <form class="contact-form" onsubmit="handleSubmit(event)" action="https://wj.qq.com/s2/25894031/bba3/" method="GET" target="_blank "style="background: #f8f9fa; padding: 25px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
     <div style="margin-bottom: 18px;">
       <label style="display: block; margin-bottom: 6px; font-weight: bold; color: #444;">姓名：</label>
       <input 
